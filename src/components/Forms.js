@@ -12,9 +12,8 @@ function Forms(){
 
     const handleSubmit = event => {
         console.log('handleSubmit ran');
-        event.preventDefault(); // 👈️ prevent page refresh
+        event.preventDefault(); //  prevent page refresh
     
-        // 👇️ access input values here
         console.log('Title ', blogTitle);
         console.log('Description ', blogDes);
         console.log('Author ', blogAuth);
@@ -26,7 +25,7 @@ function Forms(){
             author:blogAuth,
             reading_time:blogReadTime
          }
-        // 👇️ clear all input values in the form
+        
         axios.post(baseURL,objectname , {
             headers: {
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFnaGN1anBxYnZyZGZzenJlbWZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTgxMjk3NzcsImV4cCI6MTk3MzcwNTc3N30.LvOp9lASnuJAAwvg2VxFmnrVXuqZOM0KVngw8EKHQcM',
@@ -63,7 +62,7 @@ function Forms(){
             <input type="number" id="zipcode" placeholder="Reading Time" value={blogReadTime} onChange={event => setblogReadTime(event.target.value)}/>
       </div>
          
-      <button type="submit" class="btn btn-default" ><Link to="/read_blogs">POST</Link></button>
+      <button type="submit" class="btn btn-default" >POST</button>
          
    </form>
 </div>

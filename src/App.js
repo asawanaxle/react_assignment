@@ -8,13 +8,8 @@ function App() {
       
       <h1 id="title">Blogging</h1>
       
-      <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Forms />}></Route>
-      <Route path="/read_blogs" element={<Blogs />} />
-
-      </Routes>
-      </BrowserRouter>
+      <Forms />
+      <Blogs />
       
       
     </div>
